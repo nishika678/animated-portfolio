@@ -35,18 +35,19 @@ const Single=({object})=>{
 
     const {scrollYProgress}=useScroll({
         target:por,
+        // offset:["start start","end start"]
     });
 
-    const y1=useTransform(scrollYProgress,[0,1],[-300,300])
+    const y=useTransform(scrollYProgress,[0,1],[-400,400])
 
     return(
-<section ref={por}>
+<section>
     <div className="container">
         <div className="content">
-            <div className="image1">
+            <div className="image1" ref={por}>
         <img src={object.img} alt="" />
         </div>
-        <motion.div className="text">
+        <motion.div className="text" style={{y}}>
             <h2 >{object.title}</h2>
             <p>{object.desc}</p>
             <button>See Demo</button>
