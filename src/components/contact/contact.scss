@@ -23,7 +23,13 @@
     }
     .form1{
         flex: 1;
-
+        position: relative;
+        
+        .phone1{
+             background-color: rebeccapurple;
+             position: absolute;
+             margin: auto;
+         }
 
         form{
         display: flex;
